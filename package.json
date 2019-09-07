@@ -1,7 +1,7 @@
 {
   "name": "webbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple base bot for discord.js made in TypeScript",
   "main": "index.js",
   "scripts": {
     "start": "node dist/src/index.js",
