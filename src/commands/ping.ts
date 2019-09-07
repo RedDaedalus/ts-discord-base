@@ -21,7 +21,7 @@ export default class Ping extends Command {
 
     async run(message:Message):Promise<Message> {
         // @ts-ignore
-        const embed = await this.buildEmbed(embeds.info).setTitle("» Pinging...").setDescription("Fetching client ping.").setFooter(`Executed by ${message.author.tag}`);
+        const embed = this.buildEmbed(embeds.info).setTitle("» Pinging...").setDescription("Fetching client ping.").setFooter(`Executed by ${message.author.tag}`);
         const reply = await message.channel.send(embed);
         
         return reply.edit(embed.setTitle("» Pong!").setDescription(`**Ping:** ${reply.createdTimestamp - message.createdTimestamp}ms\n**❤ Heartbeat:** ${this.client.ws.ping}ms`));
