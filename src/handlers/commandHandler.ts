@@ -1,7 +1,7 @@
 import Client from "../structures/Client";
 import { Message } from "discord.js";
 
-import { embeds } from "../config";
+import { embeds, prefix } from "../config";
 
 export default (client:Client, message:Message) => {
     // Split message by spaces
@@ -9,7 +9,7 @@ export default (client:Client, message:Message) => {
     // @ts-ignore
     const cmd = args.shift().slice(prefix.length);
     // @ts-ignore
-    const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd));
+    const command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
 
     if (message.guild) {
         // @ts-ignore

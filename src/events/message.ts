@@ -13,6 +13,8 @@ export default class Message extends Event {
             if (message.guild && !message.guild.available) return false;
             // Check if the message starts with prefix
             if (!message.content.startsWith(prefix)) return false;
+            // Other checks
+            if (!message.author) return false;
             
             // Split message by spaces
             const args = message.content.split(/\s+/g);
