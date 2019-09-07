@@ -1,0 +1,27 @@
+{
+  "name": "webbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "dev": "nodemon -r source-map-support/register dist/src/index.js -e .js --ignore **/*.map.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^12.7.3",
+    "@types/ws": "^6.0.3",
+    "chalk": "^2.4.2",
+    "discord.js": "github:hydrabolt/discord.js",
+    "express": "^4.17.1",
+    "minecraft-protocol": "^1.9.4",
+    "path": "^0.12.7",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "source-map-support": "^0.5.13"
+  }
+}
