@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "minecraft-protocol": "^1.9.4",
     "path": "^0.12.7",
-    "ws": "^7.1.2"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "source-map-support": "^0.5.13"
